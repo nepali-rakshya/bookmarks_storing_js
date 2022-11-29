@@ -8,26 +8,28 @@
     <title>Bookmarks Storing Website</title>
   </head>
   <body>
-    <h3 class="website_title">Bookmarks storing section</h3>
-    <div class="container_entry">
-      Website title
-      <input type="text" name="name" id="title" />
-      <br />
-      Link
-      <input type="url" name="url" id="link" />
-      <br />
-      <button type="submit">submit</button>
-    </div>
+    <div class="big_container">
+      <h3 class="website_title">Bookmarks storing section</h3>
+      <div class="container_entry">
+        <p>Website title</p>
+        <input type="text" name="name" id="title" />
+        <br />
+        <p>Link</p>
+        <input type="url" name="url" id="link" required />
+        <br />
+        <button type="submit">submit</button>
+      </div>
 
-    <h3 class="array_storing">The Bookmarked sites</h3>
-    <div class="storing_entry">
-      <table border="1">
-        <thead>
-          <th>Website title</th>
-          <th>Website links</th>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <h3 class="storing">The Bookmarked sites</h3>
+      <div class="storing_entry">
+        <table>
+          <thead>
+            <th>Website title</th>
+            <th>Website links</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
     <script src="./index.js"></script>
   </body>
