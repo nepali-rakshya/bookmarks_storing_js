@@ -1,40 +1,36 @@
-// creating a new element anchor tag --> a
+let titleText = document.getElementById("title");
+let linkText = document.getElementById("link");
 
-let newA = document.createElement("a");
-let actualLink = document.getElementsByClassName("container")[0];
+let valueTitle, valueLink;
 
-// adding a title to the anchor tag --> a = "title"
-
-let title = document.getElementById("title");
-
-function highTitle() {
-  title.addEventListener("keypress", (event) => {
-    title = document.getElementById("title").value;
-    if (event.key === "Enter") {
-      alert(title);
-    }
-    newA.innerText = `${title}`;
-    return title;
-  });
-  return title;
+function valueTT() {
+  valueTitle = titleText.value;
+  return valueTitle;
 }
 
-// adding link to the anchor tag --> a = "link"
+function valueL() {
+  valueLink = linkText.value;
+  return valueLink;
+}
 
-let webLink = document.getElementById("link");
-
-webLink.addEventListener("keypress", function bmLink(event) {
-  webLink = document.getElementById("link").value;
-  if (event.key === "Enter") {
-    alert(webLink);
+function storeValues() {
+  for (let i = 1; i--; ) {
+    let web = document.getElementsByTagName("tbody")[0];
+    let newTR = document.createElement("tr");
+    let newTD1 = document.createElement("td");
+    let newTD2 = document.createElement("td");
+    let newA = document.createElement("a");
+    newA.innerText = valueTT();
+    newA.setAttribute("href", valueL());
+    newTD1.append(newA);
+    newTD2.innerText = valueL();
+    newTR.append(newTD1, newTD2);
+    web.append(newTR);
   }
+}
 
-  return webLink;
+let button = document.getElementsByTagName("button")[0];
+
+button.addEventListener("click", () => {
+  storeValues();
 });
-
-let valve = highTitle();
-console.log(valve);
-// console.log(bmTitle());
-
-// actualLink.append(newA);
-// newA.setAttribute("href", `${webLink}`);
