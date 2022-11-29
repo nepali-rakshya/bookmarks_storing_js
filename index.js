@@ -1,19 +1,23 @@
-// let url = prompt("Enter url", "rakshya");
+let newA = document.createElement("a");
+let actualLink = document.getElementsByClassName("container")[0];
 
-// console.log(form.value);
-// console.log(v);
+let title = document.getElementById("title");
 
-let form = document.getElementById("title");
-
-form.addEventListener("keypress", (event) => {
-  form = document.getElementById("title").value;
+title.addEventListener("keypress", (event) => {
+  title = document.getElementById("title").value;
   if (event.key === "Enter") {
-    alert(form);
+    alert(title);
   }
+  newA.innerText = `${title}`;
 });
 
-let newE = document.createElement("a");
-let link = document.getElementsByClassName("container")[0];
-link.append(newE);
-newE.setAttribute("href", "www.google.com");
-document.write(newE);
+let webLink = document.getElementById("link");
+
+webLink.addEventListener("keypress", (event) => {
+  webLink = document.getElementById("link").value;
+  if (event.key === "Enter") {
+    alert(webLink);
+  }
+  actualLink.append(newA);
+  newA.setAttribute("href", `${webLink}`);
+});
