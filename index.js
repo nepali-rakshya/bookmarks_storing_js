@@ -22,10 +22,15 @@ function storeValues() {
     let newA = document.createElement("a");
     newA.innerText = valueTT();
     newA.setAttribute("href", valueL());
+    newA.setAttribute("target", "_blank");
     newTD1.append(newA);
     newTD2.innerText = valueL();
     newTR.append(newTD1, newTD2);
     web.append(newTR);
+    let tableHead = document.getElementsByTagName("th")[0];
+    let tableHead2 = document.getElementsByTagName("th")[1];
+    tableHead.classList.add("bottomBorder");
+    tableHead2.classList.add("bottomBorder");
   }
 }
 

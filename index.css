@@ -17,7 +17,8 @@ body {
   border-radius: 2em;
   margin-bottom: 2em;
   margin-top: 2em;
-  padding: 1em;
+  padding: 2.5em 0;
+  max-width: 1048px;
 }
 
 h3.website_title,
@@ -31,9 +32,9 @@ h3.storing {
 .container_entry {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
-  margin-bottom: 2em;
+  margin-bottom: 3.5em;
 }
 
 .container_entry p,
@@ -63,9 +64,34 @@ button {
 }
 
 table {
-  border: 1px solid rgb(255, 251, 251);
+  border: 2px solid rgb(255, 251, 251);
 
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   border-radius: 1.5em;
+}
+
+th {
+  color: rgba(77, 15, 15, 0.644);
+}
+
+th,
+td {
+  padding: 0.6em;
+}
+
+.bottomBorder {
+  border-bottom: 2px solid rgb(255, 251, 251);
+}
+
+@media (min-width: 800px) {
+  .big_container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 900px) {
+  .big_container {
+    width: 60%;
+  }
 }
