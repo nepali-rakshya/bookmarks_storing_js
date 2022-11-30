@@ -65,8 +65,8 @@ button {
 
 table {
   border: 2px solid rgb(255, 251, 251);
-
-  width: 70%;
+  min-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
   border-radius: 1.5em;
 }
@@ -78,6 +78,8 @@ th {
 th,
 td {
   padding: 0.6em;
+  max-width: 300px;
+  overflow: hidden;
 }
 
 .bottomBorder {
